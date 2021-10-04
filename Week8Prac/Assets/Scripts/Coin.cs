@@ -23,7 +23,9 @@ public class Coin : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
-        if(other.gameObject.name == player.name + "(Clone)"||other.gameObject.name == player.name)
+        string objectName = other.gameObject.name.Substring(0, player.name.Length + 1);
+        Debug.Log(player.name + " & " + objectName + ".");
+        if(objectName == player.name + " "||objectName == player.name)
         {
             Destroy(gameObject);
         }
