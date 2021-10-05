@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     private Vector3 velocity = new Vector3(0,0,5);
     public float rotation = 30;
     public float speed = 1;
-    public Coin coin;
 
     // Update is called once per frame
     void Update()
@@ -18,5 +17,4 @@ public class Player : MonoBehaviour
         float angle = rotation * Time.deltaTime;
         transform.Rotate(angle * Vector3.up*dx);
     }
-
 }

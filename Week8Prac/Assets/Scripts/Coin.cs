@@ -9,7 +9,6 @@ public class Coin : MonoBehaviour
     private BoxCollider BC;
     public ScoreKeeper keeper;
 
-
     // Start is called before the first frame update
     void Start()
     {
