@@ -7,6 +7,8 @@ public class Coin : MonoBehaviour
     public float rotation = 30;
     public Player player;
     private BoxCollider BC;
+    public ScoreKeeper keeper;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class Coin : MonoBehaviour
         Debug.Log(player.name + " & " + objectName + ".");
         if(objectName == player.name + " "||objectName == player.name)
         {
+            keeper.AddScore();
             Destroy(gameObject);
         }
 
