@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
     public Player player;
     private BoxCollider BC;
     public ScoreKeeper keeper;
+    //public AudioClip collect;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +20,21 @@ public class Coin : MonoBehaviour
     void Update()
     {
         float angle = rotation * Time.deltaTime;
-        transform.Rotate(angle * Vector3.forward);
+        transform.Rotate(angle * Vector3.up);
     }
     void OnTriggerEnter(Collider collider)
     {
         GameObject other = collider.gameObject;
-        string objectName = other.gameObject.name.Substring(0, player.name.Length + 1);
+        string objectName = other.gameObject.name;
+        if(objectName.Length > player.name.Length)
+        {
+            objectName = objectName.Substring(0, player.name.Length + 1);
+        }
         Debug.Log(player.name + " & " + objectName + ".");
         if(objectName == player.name + " "||objectName == player.name)
         {
             keeper.AddScore();
+
             Destroy(gameObject);
         }
 
