@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float rotation = 30;
-    public Player player;
+    public Player player1;
     private BoxCollider BC;
     public ScoreKeeper keeper;
     //public AudioClip collect;
@@ -26,12 +26,12 @@ public class Coin : MonoBehaviour
     {
         GameObject other = collider.gameObject;
         string objectName = other.gameObject.name;
-        if(objectName.Length > player.name.Length)
+        if(objectName.Length > player1.name.Length)
         {
-            objectName = objectName.Substring(0, player.name.Length + 1);
+            objectName = objectName.Substring(0, player1.name.Length + 1);
         }
-        Debug.Log(player.name + " & " + objectName + ".");
-        if(objectName == player.name + " "||objectName == player.name)
+        Debug.Log(player1.name + " & " + objectName + ".");
+        if(objectName == player1.name + " "||objectName == player1.name)
         {
             keeper.AddScore();
 
