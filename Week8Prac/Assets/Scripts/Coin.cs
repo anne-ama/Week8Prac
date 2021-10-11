@@ -5,7 +5,6 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float rotation = 30;
-    public Player player;
     private BoxCollider BC;
     public ScoreKeeper keeper;
     public ScoreKeeperP2 keeperP2;
