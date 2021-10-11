@@ -8,6 +8,7 @@ public class Coin : MonoBehaviour
     public Player player;
     private BoxCollider BC;
     public ScoreKeeper keeper;
+    public ScoreKeeperP2 keeperP2;
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +24,15 @@ public class Coin : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        // GameObject other = collider.gameObject;
-        // string objectName = other.gameObject.name;
-        // if(objectName.Length > player.name.Length)
-        // {
-        //     objectName = objectName.Substring(0, player.name.Length + 1);
-        // }
-        // Debug.Log(player.name + " & " + objectName + ".");
-        if(collider.gameObject.CompareTag("Player1") || collider.gameObject.CompareTag("Player2"))
+        if(collider.gameObject.CompareTag("Player1"))
         {
             keeper.AddScore();
+            Destroy(gameObject);
+        }
+
+        if (collider.gameObject.CompareTag("Player2"))
+        {
+            keeperP2.AddScore();
             Destroy(gameObject);
         }
 
