@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
     private Vector3 velocity = new Vector3(0,0,5);
     public float rotation = 30;
@@ -12,11 +12,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         //up, down, left and right (using input Axes script)
-        float adKeys = Input.GetAxis(InputAxes.Horizontal);
-        float wsKeys = Input.GetAxis(InputAxes.Vertical);
+        float horizontalKeys = Input.GetAxis(InputAxes.ArrowHorizontal);
+        float verticalKeys = Input.GetAxis(InputAxes.ArrowVertical);
         
-        transform.Translate(velocity * Time.deltaTime*wsKeys);
+        transform.Translate(velocity * Time.deltaTime*verticalKeys);
         float angle = rotation * Time.deltaTime;
-        transform.Rotate(angle * Vector3.up*adKeys);
+        transform.Rotate(angle * Vector3.up*horizontalKeys);
     }
 }

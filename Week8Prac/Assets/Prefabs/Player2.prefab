@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2431397506673525245}
   - component: {fileID: 2431397506673525232}
   - component: {fileID: 2431397506673525247}
-  - component: {fileID: 2431397506673525246}
+  - component: {fileID: 7345921906828513995}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -65,7 +65,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2431397506673525246
+--- !u!114 &7345921906828513995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2431397506673525244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d22498a9684c44a9889ef9cfacc212, type: 3}
+  m_Script: {fileID: 11500000, guid: f28e803e8f71f8441a117ae18f43c48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 50
