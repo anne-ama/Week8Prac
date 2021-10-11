@@ -24,19 +24,19 @@ public class Coin : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        GameObject other = collider.gameObject;
-        string objectName = other.gameObject.name;
-        if(objectName.Length > player1.name.Length)
-        {
-            objectName = objectName.Substring(0, player1.name.Length + 1);
-        }
-        Debug.Log(player1.name + " & " + objectName + ".");
-        if(objectName == player1.name + " "||objectName == player1.name)
-        {
-            keeper.AddScore();
+        // GameObject other = collider.gameObject;
+        // string objectName = other.gameObject.name;
+        // if(objectName.Length > player1.name.Length)
+        // {
+        //     objectName = objectName.Substring(0, player1.name.Length + 1);
+        // }
+        // Debug.Log(player1.name + " & " + objectName + ".");
+        // if(objectName == player1.name + " "||objectName == player1.name)
+        // {
+        //     keeper.AddScore();
 
-            Destroy(gameObject);
-        }
+        //     Destroy(gameObject);
+        // }
 
     }
 
