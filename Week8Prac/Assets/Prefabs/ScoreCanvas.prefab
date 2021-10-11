@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1695392190140598595}
   - component: {fileID: 1695392190140598592}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: ScoreTextP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 3824913846271412351}
   - component: {fileID: 276523370428593810}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: ScoreTextP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
