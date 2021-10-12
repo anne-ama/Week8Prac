@@ -8,20 +8,15 @@ public class Player2 : MonoBehaviour
     public float rotation = 30;
     public float speed = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        float dx = Input.GetAxis("Horizontal_2");
-        float dy = Input.GetAxis("Vertical_2");
-        transform.Translate(velocity * Time.deltaTime*dy);
-        float angle = rotation * Time.deltaTime;
-        transform.Rotate(angle * Vector3.up*dx);
+        //up, down, left and right (using input Axes script)
+        float horizontalKeys = Input.GetAxis(InputAxes.ArrowHorizontal);
+        float verticalKeys = Input.GetAxis(InputAxes.ArrowVertical);
         
+        transform.Translate(velocity * Time.deltaTime*verticalKeys);
+        float angle = rotation * Time.deltaTime;
+        transform.Rotate(angle * Vector3.up*horizontalKeys);
     }
 }

@@ -11,10 +11,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dx = Input.GetAxis("Horizontal");
-        float dy = Input.GetAxis("Vertical");
-        transform.Translate(velocity * Time.deltaTime*dy);
+        //up, down, left and right (using input Axes script)
+        float adKeys = Input.GetAxis(InputAxes.Horizontal);
+        float wsKeys = Input.GetAxis(InputAxes.Vertical);
+        
+        transform.Translate(velocity * Time.deltaTime*wsKeys);
         float angle = rotation * Time.deltaTime;
-        transform.Rotate(angle * Vector3.up*dx);
+        transform.Rotate(angle * Vector3.up*adKeys);
     }
 }
